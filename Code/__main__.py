@@ -157,11 +157,11 @@ class PrioritizeControls:
 
                 # The details can be to much, so allow the user to decide if they care to see them.
                 if self.include_details:
-                    header = ("Priority (Assigned by ATT&CK)", "Technique", "Number of Mapped Controls", "Controls")
+                    header = ("Priority (Assigned by MITRE/ATT&CK)", "Technique", "Number of Mapped Controls", "Controls")
                     related_controls = "|".join(related_controls)
                     attack_priorities_with_nist.append((rank, technique, count, related_controls))
                 else:
-                    header = ("Priority (Assigned by ATT&CK)", "Technique", "Number of Mapped Controls (NIST 800-53)")
+                    header = ("Priority (Assigned by MITRE/ATT&CK)", "Technique", "Number of Mapped Controls (NIST 800-53)")
                     attack_priorities_with_nist.append((rank, technique, count))
                 # Sort based on the third item in the tuples (count)
                 attack_priorities_with_nist.sort(key=lambda x: x[0])
