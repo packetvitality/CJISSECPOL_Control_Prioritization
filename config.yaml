@@ -1,0 +1,5 @@
+results_directory: 'Results'
+prioritized_techniques: 'Inputs\TopAttackTechniques.json' # Pulled from https://top-attack-techniques.mitre-engenuity.org/calculator after selecting the relevant NIST policies.
+attack_nist_mappings: 'Inputs\nist800-53-r5-mappings.xlsx' # Pulled from https://github.com/center-for-threat-informed-defense/attack-control-framework-mappings/releases/download/v1.5.0/attack-10.1-nist800-53-r5-mappings.xlsx
+nist_cis_mappings: 'Inputs\CIS_Controls_v8_Mapping_to_NIST_SP_800_53_Rev_5_Moderate_and_Low_Base.xlsx' # Pulled from https://www.cisecurity.org/insights/white-papers/cis-controls-v8-mapping-to-nist-800-53-rev-5
+include_details: False
