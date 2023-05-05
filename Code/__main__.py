@@ -55,8 +55,10 @@ class PrioritizeControls:
         all_controls = []
         with open(new_cjis_nist_controls_file) as file:
             for line in file:
-                clean_line = line.strip()
-                no_leading_zeros = clean_line.replace("-0", "-")
+                remove_whitespace = line.strip()
+                if not remove_whitespace: #skip blank lines
+                    continue 
+                no_leading_zeros = remove_whitespace.replace("-0", "-") # Ensuring formatting matches the input spreadsheets
                 all_controls.append(no_leading_zeros)
        
         return all_controls
