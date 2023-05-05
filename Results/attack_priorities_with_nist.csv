@@ -1,4 +1,4 @@
-Priority (Assigned by ATT&CK),Technique,Number of Mapped Controls (NIST 800-53)
+Priority (Assigned by MITRE/ATT&CK),Technique,Number of Mapped Controls (NIST 800-53)
 1,T1059,22
 1,T1059.001,18
 1,T1059.002,14
