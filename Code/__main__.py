@@ -230,11 +230,11 @@ class PrioritizeControls:
 
             # The details can be to much, so allow the user to decide if they care to see them.
             if self.include_details:
-                header = ("Control", "Number of ATT&CK Techniques Mapped", "Related CIS Controls", "Techniques")
+                header = ("Control", "Number of ATT&CK Techniques & Sub-Techniques Mapped", "Related CIS Controls", "Techniques")
                 all_techniques = "|".join(techniques['ATT&CK_techniques'])
                 nist_with_mappings.append((control, technique_count, all_cis_controls, all_techniques))
             else:
-                header = ("Control", "Number of ATT&CK Techniques Mapped", "Related CIS Controls")
+                header = ("Control", "Number of ATT&CK Techniques & Sub-Techniques Mapped", "Related CIS Controls")
                 nist_with_mappings.append((control, technique_count, all_cis_controls))
             
             # Sorted based on the second item in the tuples (technique_count)

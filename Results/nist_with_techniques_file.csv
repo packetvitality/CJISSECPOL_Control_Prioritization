@@ -1,4 +1,4 @@
-Control,Number of ATT&CK Techniques Mapped,Related CIS Controls
+Control,Number of ATT&CK Techniques & Sub-Techniques Mapped,Related CIS Controls
 SI-4,332,CIS-1|CIS-10|CIS-13|CIS-15
 CM-6,311,CIS-4|CIS-12|CIS-13|CIS-16
 CM-2,253,CIS-4
