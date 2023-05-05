@@ -17,6 +17,8 @@ python -m venv my_env
 ## Example Usage
 The script expects that your **config.yaml** will be in your current directory.
 If you would prefer to specify its location, you can specify the path in the `main()` function in the `__main__.py` file.
+
+Running the script:
 ```
 python .\code\__main__.py
 ```
