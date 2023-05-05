@@ -164,7 +164,7 @@ class PrioritizeControls:
                     header = ("Priority (Assigned by ATT&CK)", "Technique", "Number of Mapped Controls (NIST 800-53)")
                     attack_priorities_with_nist.append((rank, technique, count))
                 # Sort based on the third item in the tuples (count)
-                attack_priorities_with_nist.sort(key=lambda x: x[2], reverse=True)
+                attack_priorities_with_nist.sort(key=lambda x: x[0])
 
         # Write CSV file
         with open(self.attack_priorities_with_nist_file, 'w', newline='') as file:
