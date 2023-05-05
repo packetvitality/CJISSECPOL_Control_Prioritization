@@ -7,18 +7,6 @@ import openpyxl
 
 class PrioritizeControls:
     def __init__(self, config):
-        # List of new controls. 
-        # Discovered by reading CJISSECPOL 5.9.2. New policies are highlighted in red.
-        # self.new_cjis_nist_controls = ["IA-2","IA-3","IA-4","IA-5","IA-6","IA-7","IA-8","IA-11","IA-12","SA-22","SI-2","SI-3","SI-4","SI-5","SI-7","SI-8","SI-10","SI-12","SI-16"]
-
-        # Upcoming controls, provided by CJIS contact
-        # self.new_cjis_nist_controls = ["AC-2","AC-3","AC-4","AC-5","AC-6","AC-7","AC-8","AC-11","AC-12","AC-14","AC-17","AC-18","AC-19","AC-20","AC-21","CA-2","CA-3","CA-7","CM-2","CM-3","CM-5","CM-6","CM-7","CM-8","CM-10","CM-11","CM-12","CP-2","CP-6","CP-7","CP-9","CP-10","IA-2","IA-3","IA-4","IA-5","IA-6","IA-7","IA-8","IA-11","IA-12","IR-5","MA-5","MP-7","RA-5","RA-9","SA-3","SA-4","SA-8","SA-9","SA-10","SA-11","SA-15","SA-22","SC-2","SC-4","SC-7","SC-8","SC-10","SC-12","SC-13","SC-17","SC-18","SC-20","SC-21","SC-22","SC-23","SC-28","SC-39","SI-2","SI-3","SI-4","SI-5","SI-7","SI-8","SI-10","SI-12","SI-16","SR-5","SR-6","SR-11"]
-        ### Note the following NIST controls are not available in the priority calculator (05/04/2023)
-        ### AC-11: Session Lock
-        ### AC-14: Permitted Actions Without Identification Or Authentication
-        ### IR-5: Incident Monitoring
-        ### https://top-attack-techniques.mitre-engenuity.org/calculator
-
         # Load configuration
         config = self.load_config(config)
         self.include_details = config['include_details']
@@ -28,7 +16,6 @@ class PrioritizeControls:
         attack_nist_mapping_file = config['attack_nist_mappings']
         nist_cis_mapping_file = config['nist_cis_mappings']
         new_cjis_nist_controls_file = config['new_cjis_nist_controls']
-
 
         # Initiate lists to be used later
         self.new_cjis_nist_controls = self.load_new_cjis_nist_controls(new_cjis_nist_controls_file)
@@ -52,6 +39,11 @@ class PrioritizeControls:
         return config
 
     def load_new_cjis_nist_controls(self, new_cjis_nist_controls_file):
+        ### Note the following NIST controls are not available in the priority calculator (05/04/2023)
+        ### AC-11: Session Lock
+        ### AC-14: Permitted Actions Without Identification Or Authentication
+        ### IR-5: Incident Monitoring
+        ### https://top-attack-techniques.mitre-engenuity.org/calculator
         all_controls = []
         with open(new_cjis_nist_controls_file) as file:
             for line in file:
