@@ -22,3 +22,9 @@ Running the script:
 ```
 python .\code\__main__.py
 ```
+
+# Note 
+The following NIST controls are not available in the priority calculator (05/04/2023)
+- AC-11: Session Lock
+- AC-14: Permitted Actions Without Identification Or Authentication
+- IR-5: Incident Monitoring
