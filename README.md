@@ -30,6 +30,8 @@ The following NIST controls are not available in the priority calculator (05/04/
 - IR-5: Incident Monitoring
 
 # External Mappings & Prioritization References
-- https://top-attack-techniques.mitre-engenuity.org/calculator
-- https://github.com/center-for-threat-informed-defense/attack-control-framework-mappings/releases/download/v1.5.0/attack-10.1-nist800-53-r5-mappings.xlsx
-- https://www.cisecurity.org/insights/white-papers/cis-controls-v8-mapping-to-nist-800-53-rev-5
+https://top-attack-techniques.mitre-engenuity.org/calculator
+
+https://github.com/center-for-threat-informed-defense/attack-control-framework-mappings/releases/download/v1.5.0/attack-10.1-nist800-53-r5-mappings.xlsx
+
+https://www.cisecurity.org/insights/white-papers/cis-controls-v8-mapping-to-nist-800-53-rev-5
