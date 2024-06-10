@@ -26,9 +26,13 @@ class PrioritizeControls:
         # Results files
         results_dir = config["results_directory"]
         self.directory_setup(results_dir)
-        self.attack_priorities_file = os.path.join(results_dir, "attack_priorities.csv")
-        self.attack_priorities_with_nist_file = os.path.join(results_dir, "attack_priorities_with_nist.csv")
-        self.nist_with_techniques_file = os.path.join(results_dir, "nist_with_techniques_file.csv")
+        if self.include_details:
+            self.file_ending = "_details.csv"
+        else:
+            self.file_ending = ".cvs"
+        self.attack_priorities_file = os.path.join(results_dir, f"attack_priorities{self.file_ending}")
+        self.attack_priorities_with_nist_file = os.path.join(results_dir, f"attack_priorities_with_nist{self.file_ending}")
+        self.nist_with_techniques_file = os.path.join(results_dir, f"nist_with_techniques_file{self.file_ending}")
 
     def load_config(self, config_file):
         """
