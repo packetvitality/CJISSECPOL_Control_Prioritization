@@ -1,12 +1,13 @@
 # CJISSECPOL - Prioritizing the upcoming NIST800-53 requirements.
 Upcoming CJISSECPOL policies are mapped to NIST800-53 policies. This script helps prioritize. 
 
-## Prepping the environment
+## Prepping the config file
 The **config.yaml** file contains options for deciding:
 - Where your files are loaded from.
 - Where results are saved.
-- If you want additional details in the output. 
+- Seeing all the mappings and values can be a lot, you can control this using the 'include_details' field. 
 
+## Prepping the environment
 Always good to setup a virtual environment <3
 ```
 cd path\to\project
@@ -20,7 +21,7 @@ If you would prefer to specify its location, you can specify the path in the `ma
 
 Running the script:
 ```
-python .\code\__main__.py
+python .\code\
 ```
 
 # Note 
